@@ -1,0 +1,31 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        console.log($('h1').html())
+
+        $('footer').html('<mark>foot</mark>') //mark type의 객체
+        console.log($('footer').html())
+
+        console.log($('header').find('h1').eq(1).html()) // header의 자식중에 h1 타입을 찾아서 1번째 것 리턴
+        $('header').find('h1').eq(1).html('<hr>')
+
+        $('ul').find('li').eq(2).html('index: 2').end() // chaining 끝내고 싶으면 end, find가 리턴한 컬렉션을 리턴
+            .eq(3).html('index: 3').end()
+            .eq(4).html('index: 4')
+    })
+</script>
+
+<header>
+    <h1><b>hello</b></h1>
+    <h1>world</h1>
+</header>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<footer></footer>

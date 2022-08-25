@@ -1,0 +1,38 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('<div>').appendTo('hr') // <> 는 셀렉터가 아니다. div객체가 생긴다(엘레먼트를 만드는 것이다)
+    
+    $('<div>', { // string, 객체
+        html: '<p class="center">red</p>',
+        class: 'red'
+    }).appendTo('hr') // 객체를 생성한 것이라 화면에는 나오지 않는다 > 나오게 하려면 화면에 나와있는 것에 append 하면 된다
+})
+</script>
+
+<style>
+    div {
+        background-color: orange;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+    }
+
+    hr {
+        border: .1rem solid;
+    }
+
+    .red {
+        background-color: red;
+        position: relative;
+    }
+
+    p.center {
+        position: absolute;
+        left: 1.7rem;
+        top: 1rem;
+        font-weight: bold;
+    }
+</style>
+
+<hr>

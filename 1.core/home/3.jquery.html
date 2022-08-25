@@ -1,0 +1,18 @@
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<script>
+    let msg = 'div.foo가 '
+
+    $(() => {
+        /*
+        if($('div.foo').lengrh) msg += '있다.'
+        else msg += '없다.'
+        */
+        msg += $('div.foo').length ? '있다.' : '없다.'
+       
+        console.log(msg)
+    })
+</script>
+
+<div class='foo1'></div>
+
+<!-- 컬렉션안에 배열의 원소가 있는 것과 없는 것 -->
