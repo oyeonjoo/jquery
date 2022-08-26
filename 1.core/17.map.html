@@ -1,0 +1,25 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        $('li').map((i, e) => console.log(i, e)) // 가공x, 출력만 하고 있다
+
+        let collection = $('li').map((i, e) => e.id) // e.id: 가공의 내용, id값이 들어간 collection을 return
+        console.log(collection)
+        console.log(collection.get()) // toArray: collection을 array로 바꾸는 메소드
+        
+        // 과제: 위 get() return array 를 'abc' serializing 하라.
+        console.log(collection.get().join(''))
+
+        //
+        $.map(collection.get(), (e, i) => console.log(i, e)) // e, i 순서
+
+        let array = $.map({name: 'adelia', age: 20}, (v, k) => v) // v, k 순서, val들이 들어있는 arr이 return
+        console.log(array)
+    })
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>

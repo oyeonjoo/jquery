@@ -1,0 +1,25 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        $('li').each((i, e) => console.log(i, e)) // callback, index-파라미터 순서, element iterating, e: html element
+        // 주어객체.method > collection을 대상으로 iterating
+        $('li').each((i, e) => console.log(i, e.id)) // e.id: 객체.속성명
+        /*
+        0 'a'
+        1 'b'
+        2 'c'
+        */
+       // for-each는 element-index 순서
+       jQuery.each([1, 2, 3, 4], (i, e) => console.log(`[${i}]: `, e)) // array를 대상으로 iterating, (i, e)가 callback이다
+        // jQuery를 줄여서 $
+       $.each($('li').toArray(), (i, e) => console.log(i, e) ) // each는 arr 대상으로, collection.toArray() > arr를 return
+
+       $.each({name: 'adelia', age: 20}, (k, v) => console.log(k, ':', v)) // 객체를 iterrating
+    }) 
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>

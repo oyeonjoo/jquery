@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        let h1 = $('h1')
+
+        console.log(h1.width(), h1.height()) // 브라우저 창 크기에 맞춰서 width가 변한다, read
+
+        h1.width('5rem') // write
+        h1.height('5rem') // write
+    }) // 위치 변경은 append, appendTo 메소드 사용
+</script>
+
+<style>
+    h1 {
+        border: .1rem solid;
+    }
+</style>
+
+<h1>HELLO</h1>
+<h1>WORLD</h1>

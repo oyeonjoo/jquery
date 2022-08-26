@@ -1,0 +1,19 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        console.log($('.1').children()) // 1의 직계, dom에서 왼>오 순서로 배열, 0: div.2-1, 1: div.2-2, 2: div.2-3
+        console.log($('.1').find('div')) //0: div.2-1, 1: div.3, 2: div.4, 3: div.2-2, 4: div.2-3
+    })
+</script>
+
+<pre>
+    <div class='1'>
+        <div class='2-1'>
+            <div class='3'>
+                <div class='4'></div> <!-- 트리상에서 가장 끝에 있는 것, leaf node -->
+            </div>
+        </div>
+        <div class='2-2'></div>
+        <div class='2-3'></div>
+    </div>
+</pre>

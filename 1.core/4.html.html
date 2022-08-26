@@ -1,17 +1,17 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
     $(() => {
-        console.log($('h1').html())
+        console.log($('h1').html()) // 파라미터로 html 컨텐츠를 준다
 
-        $('footer').html('<mark>foot</mark>') //mark type의 객체
+        $('footer').html('<mark>foot</mark>') //mark type의 객체, 컨텐츠는 자식이다, <footer></footer> 사이에 mark를 집어넣는다
         console.log($('footer').html())
 
-        console.log($('header').find('h1').eq(1).html()) // header의 자식중에 h1 타입을 찾아서 1번째 것 리턴
-        $('header').find('h1').eq(1).html('<hr>')
+        console.log($('header').find('h1').eq(1).html()) // header의 자식중에 h1 타입을 찾아서 1번째 것 리턴, 그것의 html을 읽는다
+        $('header').find('h1').eq(1).html('<hr>') // find는 자식을 찾는다
 
         $('ul').find('li').eq(2).html('index: 2').end() // chaining 끝내고 싶으면 end, find가 리턴한 컬렉션을 리턴
-            .eq(3).html('index: 3').end()
-            .eq(4).html('index: 4')
+            .eq(3).html('index: 3').end() // 태그가 없는것은 텍스트모드
+            .eq(4).html('index: 4') // collection.eq
     })
 </script>
 

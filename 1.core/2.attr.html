@@ -2,11 +2,11 @@
 <script>
     $(() =>{
         console.log($('a').attr('href')) // 0번째 원소만 바꾼다, attr은 attribute value 를 리턴
-
-        $('a').attr('href', 'https://www.daum.net/') // (attr name, atte val) > href의 속성값을 바꾼다, 컬렉션의 원소를 모두 건드린다, google을 눌러도naver를 눌러도 daum으로 이동한다
+        // 화면에 출력하는 것이 랜더링, 출력하지 않으면 랜더링 fn이 아니다, attr은 랜더링 fn이 아니다
+        $('a').attr('href', 'https://www.daum.net/') // (attr name, attr val) > href의 속성값을 바꾼다, 컬렉션의 원소를 모두 건드린다, google을 눌러도naver를 눌러도 daum으로 이동한다
 
         $('a').attr({
-            href: 'https://jquery.com',
+            href: 'https://jquery.com', // 속성명을 key로 써야한다
             target: '_blank' // _blank: 빈칸
         }) // n개의 attr을 {} 객체로 표현한다
 
@@ -15,5 +15,5 @@
     })
 </script>
 
-<a href='https://www.google.co.kr/'>google</a> <!-- 링크를 attribute라고한다 -->
+<a href='https://www.google.co.kr/'>google</a> <!-- 링크를 attribute라고한다, attr val -->
 <a href='https://www.naver.com/'>naver</a>

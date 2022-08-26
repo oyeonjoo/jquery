@@ -1,0 +1,16 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        let $div1 = $('div') // 찾은 div를 $div1에 담겠다
+        let $div2 = $div1.eq(0) // 리턴타입 제이쿼리, div2는 제이쿼리 메소드를 call 할 수 있다
+        let div3 = $div1.get(0) // 순수한 데이터, 리턴타입 html element, div3은 제이쿼리 메소드를 call 할 수 없다
+        console.log($div1, $div2, div3)
+        console.log(typeof $div1, typeof $div2, typeof div3) // object object object
+
+        let $div11 = $('div') // 4번의 div와 같다
+        let $div22 = $div11.eq(0) // 매번 새로운 컬렉션을 만들어서 리턴한다
+        let div33 = $div11.get(0)
+        console.log($div1 == $div11, $div2 == $div22, div3 == div33) // false false true
+    })
+</script>
+<div></div>

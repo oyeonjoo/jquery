@@ -1,0 +1,10 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        let phrase = ' hello world '
+
+        // trim() 결과를 확인토록, 아래 parameter 를 수정하라.
+        console.log('|' + phrase.trim() + '|') // 임시 mapper 객체가 생긴다. trim이 끝나면 버린다
+        console.log('|' + $.trim(phrase) + '|')
+    })
+</script>

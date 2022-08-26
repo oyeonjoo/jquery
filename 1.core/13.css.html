@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        console.log($('h1').css('font-size')) // css.(property name)을 적어야한다, 파라미터 1개쓰면 read
+        console.log($('h1.big').css('font-size', '3rem')) // 파라미터 2개쓰면 write
+        $('h1.big').css({
+            'font-size': '4rem',
+            color: 'red'
+        }) // 파라미터가 n개이면 {} 객체를 넣어준다, key는 따옴표 안써도된다, val은 써야한다
+    })
+</script>
+
+<h1>HELLO</h1>
+<h1 class='big'>WORLD</h1>

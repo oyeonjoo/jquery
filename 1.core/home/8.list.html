@@ -1,16 +1,15 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
     $(() => {
-        $('ul').append('<li>item 0</li>')
-        $('ul').append('<li>item 1</li>')
-        $('ul').append('<li>item 2</li>')
-        $('ul').append('<li>item 3</li>')
-        $('ul').append('<li>item 4</li>')
-        $('ul').append('<li>item 5</li>')
-        $('ul').append('<li>item 6</li>')
-        $('ul').append('<li>item 7</li>')
-        $('ul').append('<li>item 8</li>')
-        $('ul').append('<li>item 9</li>')
+        /*
+        for(let i = 0; i < 10; i++)
+            $(`<li>item ${i}</li>`).appendTo('ul') // rendering 10번해야함
+        */
+       let items = []
+       for(let i = 0; i < 10; i++)
+        items.push(`<li>item ${i}</li>`) // items에 원소 10개가 생긴다
+
+        $(items.join('')).appendTo('ul')
     })
 </script>
 
