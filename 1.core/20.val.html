@@ -21,7 +21,13 @@
         mountain
         apple
         */
-       $(':checked').get().join('')
+        $(':checked').each((i, e) => console.log($(e).val())) // e.val(): error, val 속성이 없다, e를 객체로 만들어줘야한다
+        $(':checked').each((i, e) => console.log(e.value))
+
+        //
+        $('input').val(['noon', 'sea', 'banana']) // checked 된 것을 noon, sea, banana로 바꾼다
+        $('#fruit').val('banana') // apple로 check된 것을 banana로 바꾼다
+        $('#greens').val(['cucumber', 'carrot']) // cucumber와 carrot에 check하게 한다
     })
 </script>
 

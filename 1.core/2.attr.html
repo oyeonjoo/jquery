@@ -1,7 +1,7 @@
 <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 <script>
     $(() =>{
-        console.log($('a').attr('href')) // 0번째 원소만 바꾼다, attr은 attribute value 를 리턴
+        console.log($('a').attr('href')) // 0번째 원소만 바꾼다, attr name을 적으면 attribute value 를 리턴
         // 화면에 출력하는 것이 랜더링, 출력하지 않으면 랜더링 fn이 아니다, attr은 랜더링 fn이 아니다
         $('a').attr('href', 'https://www.daum.net/') // (attr name, attr val) > href의 속성값을 바꾼다, 컬렉션의 원소를 모두 건드린다, google을 눌러도naver를 눌러도 daum으로 이동한다
 
@@ -17,3 +17,4 @@
 
 <a href='https://www.google.co.kr/'>google</a> <!-- 링크를 attribute라고한다, attr val -->
 <a href='https://www.naver.com/'>naver</a>
+<!-- attr: 파라미터가 1개이면 read, 파라미터가 2개 이상이면 write -->

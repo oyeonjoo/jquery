@@ -1,0 +1,31 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        $('button').click(() => { // button에 click handler 등록
+            // 과제: userName field 에 값이 입력됐으면, 을 구현하라.
+            if($(':text').val()) $('form').submit() // submit event 를 발생시키는것, 핸들러를 등록하는 것이 아니다, form에는 기본적으로 등록된 핸들러가 있다 > form을 제출한다
+            // 과제: '사용자명을 입력하세요.' error message 를 <span>에 출력하라'
+            // else $('span').append('<mark>사용자명을 입력하세요.</mark>')
+            // else $('span').html('<mark>사용자명을 입력하세요.</mark>')
+            // else $('span').text('사용자명을 입력하세요.')
+
+            // 과제: 에러메세지를 빨간색으로 출력하라.
+            // else $('span').text('사용자명을 입력하세요.').css('color', 'red')
+
+            // 과제: 에러메세지를 빨간색으로 출력하라. 그리고,
+            //       userName field 의 dorder를 점선으로 바꿔라.
+            else {
+                $('span').text('사용자명을 입력하세요.').css('color', 'red')
+                $(':text').css('border', 'red .1rem dotted')
+            }
+        }) // text 메소드는 string type
+    })
+</script>
+
+<form>
+    <input type='text' name='userName' placeholder='사용자명'/><span></span>
+    <button type='button'>submit</button>
+</form>
+
+<!-- 작성하다 > value 값을 채워넣는다
+     제출하다 > submit 버튼을 누른다 -->

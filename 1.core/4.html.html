@@ -12,6 +12,9 @@
         $('ul').find('li').eq(2).html('index: 2').end() // chaining 끝내고 싶으면 end, find가 리턴한 컬렉션을 리턴
             .eq(3).html('index: 3').end() // 태그가 없는것은 텍스트모드
             .eq(4).html('index: 4') // collection.eq
+        
+        $('h1').text('Hi')
+        consile.log($('h1').text())
     })
 </script>
 

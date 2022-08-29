@@ -1,6 +1,6 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
-    $(() => {
+    $(() => { // map은 return한다
         $('li').map((i, e) => console.log(i, e)) // 가공x, 출력만 하고 있다
 
         let collection = $('li').map((i, e) => e.id) // e.id: 가공의 내용, id값이 들어간 collection을 return

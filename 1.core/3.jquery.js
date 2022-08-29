@@ -17,7 +17,7 @@ $('#contents ul.people li')
 </div>
 */ // li가 원소이다, li 2개가 collection 안에 들어있다
 
-$('a.external:first') // a.external: n개가 리턴된다, first sellector 때문에 맨 위의 a class가 리턴된다, 마지막은 last
+$('a.external:first') // a.external: n개가 리턴된다, first sellector 때문에 맨 위의 a class가 리턴된다(0번째), 마지막은 last
 /*
 <a class='external'></a>
 <a class='external'></a>
@@ -35,7 +35,7 @@ $('li:odd') // 홀수번째 li
 
 $('div:visible') // 보이는 것만 찾겠다, 특별히 설정하지 않으면 모두 visible이다
 
-$('div:gt(1)') // lt 작은
+$('div:gt(1)') // index가 1보다 큰, lt 작은
 /*
 <div></div>
 <div></div>
@@ -95,8 +95,8 @@ $('form :selected') // select 의 옵션에 해당하는 것, checked와 select�
 <select><option></option></select>
 */
 
-$('form :enabled')
-$('form :disabled')
+$('form :enabled') // 활성화된 객체
+$('form :disabled') // 비활성화된 객체
 
 $('form :file') // <input type='file'/>
 

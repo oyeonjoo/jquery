@@ -1,6 +1,6 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
-    $(() => {
+    $(() => { // (index, 파라미터), each는 return하는 것이 없는 메소드이다.
         $('li').each((i, e) => console.log(i, e)) // callback, index-파라미터 순서, element iterating, e: html element
         // 주어객체.method > collection을 대상으로 iterating
         $('li').each((i, e) => console.log(i, e.id)) // e.id: 객체.속성명

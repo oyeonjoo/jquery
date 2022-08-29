@@ -2,7 +2,7 @@
 <script>
     $(() => {
         $('body').data('foo', 10) // foo라는 데이터를 body에 집어넣는다
-        $('body').data('bar', {isManual: true}) // val: any type, 객체를 넣는다
+        $('body').data('bar', {isManual: true}) // key: string type, val: any type, 객체를 넣는다
         $('body').data({
             baz: [1, 2],
             hoi: 'hello'
@@ -11,6 +11,6 @@
         console.log($('body').data('foo')) // 10, val을 읽는다
         console.log($('body').data('bar')) // {isManual: true}
 
-        console.log($('body').data()) // {foo: 10, bar: {…}, baz: Array(2), hoi: 'hello'}, 4개의 entry가 들어간 객체가 나온다
+        console.log($('body').data()) // 파라미터를 넣지 않으면 다 읽는다, {foo: 10, bar: {…}, baz: Array(2), hoi: 'hello'}, 4개의 entry가 들어간 객체가 나온다
     })
 </script>
