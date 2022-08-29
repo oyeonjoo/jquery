@@ -1,0 +1,11 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        $('input').keyup(function() {
+            $('span').text($(this).val()) // key up-change event는 엔터키를 누르지 않아도 된다
+        })
+    })
+</script>
+
+<input type='text'/>
+<span></span>

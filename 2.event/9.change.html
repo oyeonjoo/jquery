@@ -1,17 +1,24 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
     $(() => {
-      $('#wrap').on({
-        change() {
-            $('span').text($(this).val()) // span에 text()를 출력한다
-        }
-      })
+        /*
+        $('#wrap').on({
+            change() {
+                $('span').text($(this).val()) // span에 text()를 출력한다
+            }
+        })
+      */
       // 과제: span 에 메세지가 출력되도록 하라.
-      $('#wrap').on({
-        change() {
-            $('span').text($(this).val(''))
-        }
-      })
+        /*
+        $('#wrap').on({
+            change() {
+                $('span').text($(this).val())
+            }
+        }, '.c')
+        */
+        $('#wrap').on('change', '.c', function() {
+            $('span').text($(this).val())
+        })
     })
 </script>
 
@@ -24,7 +31,7 @@
     <input type='checkbox' value='check' class='c'/>
     <input type='radio' value='radio' class='c'/>
 
-    <input type='text' class='c'/>
+    <input type='text' class='c'/> <!-- 엔터키를 눌러야 change event가 발생한다 -->
 </div>
 
 <span></span>

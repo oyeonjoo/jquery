@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        $(':password').keydown(e => {
+            if(e.keycode == 13) $('form').submit() // enter 키의 코드 13 > pc에서만 가능, 모바일에서느 안된다
+        })
+    })
+</script>
+
+<form>
+    <input type='text' name='id'/> <!-- submit이 아니라 여기서 만들어진다 -->
+    <input type='password' name='password'/>
+    <input type='submit'/>
+</form>
