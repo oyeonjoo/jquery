@@ -1,5 +1,10 @@
 <script>
-window.onerror = (msg, url, line, col, err) =>{
-    document.write(`${msg}<br>`) // document.write: 랜더링 가능
-} // window.onerror: 에러가 발생하면 작동할 핸들러를 등록하는 것
+window.onerror = (msg, url, line, col, err) => { // 에러 발생시 작동할 내가 원하는 핸들러 등록
+    document.write(`${msg} <br>`) // document.write: 랜더링이 가능하다
+    document.write(`at ${line}:${col} of ${url}`)
+    document.write(`<hr>`)
+    document.write(err)
+}
+
+a // a가 선언되지 않았는데 사용되어서 래퍼런스 error, window 객체가 가진 기본 핸들러가 작동
 </script>

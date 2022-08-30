@@ -7,7 +7,7 @@
             mouseout: () => $('div').css('background', '')
         })
 
-        $('button').click(() => $('div').off('mouseup'))
+        $('button').click(() => $('div').off('mouseup')) // off: 핸들러가 사라진다
     })
 </script>
 
@@ -23,3 +23,4 @@
 
 <div></div>
 <button type='button'>remove</button>
+<!-- 여기까지는 user가 이벤트를 발생시킨다 -->

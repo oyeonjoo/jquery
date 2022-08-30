@@ -2,7 +2,7 @@
 <script>
     $(() => {
         $('a').click(e => {
-            e.preventDefault()
+            e.preventDefault() // 핸들러의 접속을 막는다
             $('body').append('<p>prevent default handler</p>')
         })
     })

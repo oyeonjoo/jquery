@@ -1,0 +1,29 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        $('button').click(() => {
+            $.ajax({ // 속성값을 객체 상태로 표현, 파라미터로 넣어준다, 클라이언트에서 실행
+                url: '1.data.json', // request, 데이터타입은 text
+                data: {id: 'yellow'},
+                type: 'get', // request type, 읽을테니 달라는 뜻
+                dataType: 'json', // data를 json으로 주고 받겠다(7), 여기까지 request: 클라이언트가 서버로 보내는 데이터의 집합
+                success: (data, status, xhr) => { // response가 성공일때 작동할 핸들러 등록
+                    $('<h3>').text(data.userName).appendTo('body') // 데이터가 오브젝트로: deserializing, parsing
+                    $('<p>').html(status).appendTo('body')
+                    console.log(xhr) // xhr에 객체가 담긴다
+                }, // response: 서버가 클라이언트로 보내는 데이터의 집합, 메세지는 성공 or 실패(404 error)이다, 데이터 타입은 text
+                error: (xhr, status) => {
+                    console.log('error: ', status)
+                    console.log(xhr)
+                },
+                complete: (xhr, status) => {
+                    console.log('complete: ', status)} // complete: 꼭 하고 싶은 작업을 적는다
+                    
+            })
+        }) // 크롬에서 request를 보내면 라이브서버가 받아서(컨테이너로서) 일치하는 url을 찾아서 코드를 response에 담아서 클라이언트에게 보낸다
+    })
+</script>
+
+<button type='button'>click</button>
+<!-- url을 잘못 적으면 error, 제대로 적으면 success-->
+<!-- Asynchrous Javascript And Xml -->

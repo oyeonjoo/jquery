@@ -2,11 +2,11 @@
 <script>
     $(() => {
         $('button').on('click', () => $('span').text(' clicked.')) // button에서 click 이벤트가 발생하면 핸들러를 작동
-
+        // 이벤트 이름(click), 핸들러
         $('button').on({
             mouseover: () => $('span').text(' overed.'),
             mouseout: () => $('span').text('outed.')})
-    })
+    })  // on의 파라미터로 넣어준다
 </script>
 
 <button type='button'>confirm</button><span></span>

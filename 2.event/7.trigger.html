@@ -5,7 +5,7 @@
         // 과제: one 메세지가 1초 뒤에 사라지도록 하라,
         $('#one').click(() => $('span').text('one').fadeOut(1000))
 
-        // $('#two').click(() => $('#one').trigger('click')) // triger 때문에 one버튼이 작동
+        // $('#two').click(() => $('#one').trigger('click')) // trigger 때문에 one버튼이 작동
         $('#two').click(() =>$('#one').click())
     })
 </script>

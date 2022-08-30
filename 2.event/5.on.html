@@ -8,9 +8,9 @@
             // 과제: method 표기법으로 mouseleave handler 를 작성하라.
             //       handler는 background 색을 없앤다.
             mouseleave () {
-                $(this).removeClass().addClass('circle mouseleave')
+                $(this).removeClass().addClass('circle mouseleave') // 새로운 것을 넣으려면 remove로 청소하고 다시 add
             }
-        }, '.circle')
+        }, '.circle') // '.circle': 셀렉터에 해당하는 자식 객체에 핸들러를 등록한다
 
         // $('button').on('click', () => $('#wrap').append($('.circle')))
         // $('button').on('click', () => $('#wrap').append($('.circle').clone()))

@@ -1,0 +1,43 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        let table = $('tbody')
+
+        $('button').click(() => {
+            $.ajax({ // 준비하지 않은 값은 ajax 기본값으로 들어간다
+                url: '2.data.json',
+                success: data => { // url에서 디스시리얼라이징된 객체가 data에 들어간다
+                    // 과제: table을 채워라.
+                    let fruits = data.fruits
+                    let fruit, col, val, tr, td
+
+                    for(let row in fruits) { // tr, key(0, 1번째 row)
+                        fruit = fruits[row] // 사과를 얻는다
+                        tr = table.find('tr').eq(row) // 0번째 tr을 찾는다(table-tbody의 자식), row = 0
+
+                        col = 0
+                        for(let key in fruit) { // td, key(이름, 가격, 기한, 생산자)
+                            val = fruit[key] // 사과가 담긴다
+                            td = tr.find('td').eq(col++) // td를 찾는다, col을 쓴다, _번째 td: col값 증가로 처리
+                            td.text(val)
+                        }
+                    }
+                }
+            })
+        })
+    })
+</script>
+
+<button type='button'>load</button>
+
+<table>
+    <thead>
+        <tr><th>이름</th><th>가격</th><th>기한</th><th>생산자</th></tr>
+    </thead>
+    <tbody>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>
+<!-- 1번째 tr의 td~~, 2번째 tr의 td~~ -->
+<!-- table DOM이 남아있는 것이다 -->
